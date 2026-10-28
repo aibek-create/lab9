@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="kk" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalPrep - IELTS/TOEFL Дайындық Мектебі</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка және навигация -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="header__logo">GlobalPrep</a>
+
+            <!-- Бургер меню үшін чекбокс (жасанды скриптсіз, таза CSS арқылы ашылады) -->
+            <input type="checkbox" id="burger-toggle" class="burger-toggle">
+            <label for="burger-toggle" class="burger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#courses" class="nav__link">Courses</a></li>
+                    <li><a href="#results" class="nav__link">Results</a></li>
+                    <li><a href="#speakers" class="nav__link">Speakers</a></li>
+                    <li><a href="#blog" class="nav__link">Blog</a></li>
+                </ul>
+                <a href="#feedback" class="btn btn--secondary">Check Your Level</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Басты бет (Hero бөлімі) -->
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1>Pass IELTS with 7.5+ on the First Attempt</h1>
+                    <p>Халықаралық емтихандарға сапалы дайындық және бірінші әрекеттен жоғары балл алу кепілдігі.</p>
+                    <a href="#feedback" class="btn btn--primary">Take a Trial Test</a>
+                </div>
+                <div class="hero__media">
+                    <div class="hero__image-box">Оқу процесі</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Емтихан түрлері (Grid) -->
+        <section id="courses" class="grid-section">
+            <div class="container">
+                <h2 class="title">Exam Structure</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Listening</h3>
+                        <p>Тыңдап түсіну дағдыларын дамыту және аудио материалдармен жұмыс.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Reading</h3>
+                        <p>Академиялық мәтіндерді жылдам оқу және ақпаратты тез табу әдістері.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Writing</h3>
+                        <p>Эссе жазу құрылымы, грамматикалық қателерді түзету және лексиканы байыту.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Speaking</h3>
+                        <p>Сөйлеу қабілетін жетілдіру, еркін сөйлеу және стресспен күресу тренингтері.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Тіркелу формасы (Feedback) -->
+        <section id="feedback" class="feedback-section">
+            <div class="container">
+                <h2 class="title">Placement Testing</h2>
+                <form class="form" action="#" method="POST">
+                    <div class="form-group">
+                        <label>Аты-жөніңіз</label>
+                        <input type="text" name="name" placeholder="Айбек" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telegram / WhatsApp</label>
+                        <input type="tel" name="contact" placeholder="+7 700 000 0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Қазіргі деңгейіңіз (CEFR)</label>
+                        <select name="level" required>
+                            <option value="" disabled selected>Деңгейді таңдаңыз</option>
+                            <option value="A2">A2</option>
+                            <option value="B1">B1</option>
+                            <option value="B2">B2</option>
+                            <option value="C1">C1</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary">Жіберу</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал (Footer) -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>© 2026 GlobalPrep. Барлық құқықтар қорғалған.</p>
+            <div class="footer-links">
+                <a href="https://www.ielts.org" target="_blank">IELTS Official</a>
+                <a href="https://www.ets.org/toefl" target="_blank">ETS TOEFL</a>
+            </div>
+            <button id="theme-btn" class="theme-btn">Теманы ауыстыру</button>
+        </div>
+    </footer>
+
+    <script>
+        // Қарапайым тема ауыстырғыш скрипт
+        const btn = document.getElementById('theme-btn');
+        btn.addEventListener('click', () => {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            html.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+        });
+    </script>
+</body>
+</html>
